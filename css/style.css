@@ -1,0 +1,90 @@
+body {
+    margin:0;
+    font-family: Arial;
+    background:#0f1115;
+    color:white;
+}
+
+header {
+    height:50px;
+    background:#151922;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 15px;
+}
+
+#menuBtn { cursor:pointer; font-size:22px; }
+
+#sideMenu {
+    position:fixed;
+    left:-200px;
+    top:50px;
+    width:200px;
+    height:100%;
+    background:#1a1f2b;
+    display:flex;
+    flex-direction:column;
+    padding-top:20px;
+    transition:0.3s;
+}
+
+#sideMenu button {
+    background:none;
+    border:none;
+    color:white;
+    padding:10px;
+    cursor:pointer;
+    text-align:left;
+}
+
+#sideMenu.show { left:0; }
+
+main { margin-left:0; padding:15px; }
+
+.page { display:none; }
+
+.case, .skin {
+    background:#1c2230;
+    padding:10px;
+    margin:10px;
+    border-radius:8px;
+    display:inline-block;
+    width:150px;
+    text-align:center;
+}
+
+.case img, .skin img { width:100%; }
+
+.roll {
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+}
+
+.hidden { display:none; }
+
+.roll-track {
+    display:flex;
+    overflow:hidden;
+    width:600px;
+    border:2px solid gold;
+    background:#111;
+}
+
+.roll-item {
+    min-width:120px;
+    text-align:center;
+    padding:10px;
+    animation:none;
+}
+
+.roll-item img { width:100px; }
+
+.rare { box-shadow:0 0 15px gold; }
+.epic { box-shadow:0 0 15px purple; }
+.legend { box-shadow:0 0 15px red; }
