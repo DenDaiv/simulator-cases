@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Case Simulator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+<header>
+    <span id="balance">0 фришек</span>
+    <div id="menuBtn" onclick="toggleMenu()">⋮</div>
+</header>
+
+<nav id="sideMenu">
+    <button onclick="showPage('cases')">Кейсы</button>
+    <button onclick="showPage('inventory')">Инвентарь</button>
+    <button onclick="showPage('clicker')">Кликер</button>
+    <button onclick="showPage('profile')">Профиль</button>
+    <button disabled>Апгрейд (скоро)</button>
+</nav>
+
+<main>
+    <section id="cases" class="page"></section>
+    <section id="inventory" class="page"></section>
+    <section id="clicker" class="page"></section>
+    <section id="profile" class="page"></section>
+</main>
+
+<!-- РУЛЕТКА -->
+<div id="caseRoll" class="roll hidden">
+    <div class="roll-track" id="rollTrack"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/cases.js"></script>
+<script src="js/clicker.js"></script>
+<script src="js/main.js"></script>
+</div>
+</body>
+</html>
